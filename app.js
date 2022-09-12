@@ -1,8 +1,12 @@
+require('dotenv').config();
 const express = require("express");
+
 const https = require("https");
+
 const bodyParser = require("body-parser");
 
 const app = express();
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -12,7 +16,7 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
     const query = req.body.cityName;
-    const apikey = "97d8e1e20e90f926bf8d53ce2b0a6e53";
+    const apikey = process.env.APIKEY;
     const unit = "metric";
     const url =
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -32,7 +36,7 @@ app.post("/", function (req, res) {
             const icon = weatherData.weather[0].icon;
             const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
             res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            res.write("<p>Bienvenue sur notre site </p>");
+            res.write("<p>Bienvenue sur votre Application Méteo</p>");
             res.write("<h1>la température aujourd'hui à " + query + " est de" + " " + temp +" "+ "°C !</h1>");
             res.write("<img src=" + imageURL + ">");
             res.send();

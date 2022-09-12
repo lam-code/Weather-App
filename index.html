@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Tiro+Devanagari+Marathi:ital@1&display=swap" rel="stylesheet">
     <title>Notre Application Meteo</title>
   </head>
   <body>
-    <form action="/" method="post">
+    <h1>Weather API</h1>
+    <form action="http://127.0.0.1:3000" method="post">
       <label for="villeInp">Nom de la ville</label>
-      <input id="villeInp" type="text" name="cityName" />
+      <input id="villeInp" type="text" name="cityName" autocomplete="off"/>
       <button type="submit">Validez</button>
     </form>
   </body>

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&family=Tiro+Devanagari+Marathi:ital@1&display=swap");
+
+*,
+::before,
+::after {
+  font-family: "Great Vibes", cursive;
+  background-color: cadetblue;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Syne Mono", monospace; */
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+h1 {
+  color: blue;
+}
